@@ -146,4 +146,4 @@ jobs:
         XCODE_VERSION: 9.4.1
       CLANG10.0:
         CONAN_APPLE_CLANG_VERSIONS: 10.0
-        XCODE_VERSION: 10.0
+        XCODE_VERSION: 10
