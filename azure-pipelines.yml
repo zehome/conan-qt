@@ -18,106 +18,86 @@ jobs:
       CONAN_PASSWORD: $(CONAN_PASSWORD)
   strategy:
     matrix:
-      GCC4.9_PAGE1:
+      GCC4.9_X86:
         CONAN_GCC_VERSIONS: 4.9
         CONAN_DOCKER_IMAGE: conanio/gcc49
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      GCC4.9_PAGE2:
+        CONAN_ARCHS: "x86"
+      GCC4.9_X86_64:
         CONAN_GCC_VERSIONS: 4.9
         CONAN_DOCKER_IMAGE: conanio/gcc49
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      GCC5_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      GCC5_X86:
         CONAN_GCC_VERSIONS: 5
         CONAN_DOCKER_IMAGE: conanio/gcc5
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      GCC5_PAGE2:
+        CONAN_ARCHS: "x86"
+      GCC5_X86_64:
         CONAN_GCC_VERSIONS: 5
         CONAN_DOCKER_IMAGE: conanio/gcc5
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      GCC6_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      GCC6_X86:
         CONAN_GCC_VERSIONS: 6
         CONAN_DOCKER_IMAGE: conanio/gcc6
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      GCC6_PAGE2:
+        CONAN_ARCHS: "x86"
+      GCC6_X86_64:
         CONAN_GCC_VERSIONS: 6
         CONAN_DOCKER_IMAGE: conanio/gcc6
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      GCC7_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      GCC7_X86:
         CONAN_GCC_VERSIONS: 7
         CONAN_DOCKER_IMAGE: conanio/gcc7
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      GCC7_PAGE2:
+        CONAN_ARCHS: "x86"
+      GCC7_X86_64:
         CONAN_GCC_VERSIONS: 7
         CONAN_DOCKER_IMAGE: conanio/gcc7
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      GCC8_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      GCC8_X86:
         CONAN_GCC_VERSIONS: 8
         CONAN_DOCKER_IMAGE: conanio/gcc8
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      GCC8_PAGE2:
+        CONAN_ARCHS: "x86"
+      GCC8_X86_64:
         CONAN_GCC_VERSIONS: 8
         CONAN_DOCKER_IMAGE: conanio/gcc8
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      CLANG39_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      CLANG39_X86:
         CONAN_CLANG_VERSIONS: 3.9
         CONAN_DOCKER_IMAGE: conanio/clang39
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      CLANG39_PAGE2:
+        CONAN_ARCHS: "x86"
+      CLANG39_X86_64:
         CONAN_CLANG_VERSIONS: 3.9
         CONAN_DOCKER_IMAGE: conanio/clang39
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      CLANG40_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      CLANG40_X86:
         CONAN_CLANG_VERSIONS: 4.0
         CONAN_DOCKER_IMAGE: conanio/clang40
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      CLANG40_PAGE2:
+        CONAN_ARCHS: "x86"
+      CLANG40_X86_64:
         CONAN_CLANG_VERSIONS: 4.0
         CONAN_DOCKER_IMAGE: conanio/clang40
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      CLANG50_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      CLANG50_X86:
         CONAN_CLANG_VERSIONS: 5.0
         CONAN_DOCKER_IMAGE: conanio/clang50
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      CLANG50_PAGE2:
+        CONAN_ARCHS: "x86"
+      CLANG50_X86_64:
         CONAN_CLANG_VERSIONS: 5.0
         CONAN_DOCKER_IMAGE: conanio/clang50
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      CLANG60_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      CLANG60_X86:
         CONAN_CLANG_VERSIONS: 6.0
         CONAN_DOCKER_IMAGE: conanio/clang60
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      CLANG60_PAGE2:
+        CONAN_ARCHS: "x86"
+      CLANG60_X86_64:
         CONAN_CLANG_VERSIONS: 6.0
         CONAN_DOCKER_IMAGE: conanio/clang60
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
-      CLANG70_PAGE1:
+        CONAN_ARCHS: "x86_64"
+      CLANG70_X86:
         CONAN_CLANG_VERSIONS: 7.0
         CONAN_DOCKER_IMAGE: conanio/clang7
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 1
-      CLANG70_PAGE2:
+        CONAN_ARCHS: "x86"
+      CLANG70_X86_64:
         CONAN_CLANG_VERSIONS: 7.0
         CONAN_DOCKER_IMAGE: conanio/clang7
-        CONAN_TOTAL_PAGES: 2
-        CONAN_CURRENT_PAGE: 2
+        CONAN_ARCHS: "x86_64"
 - job: macOS
   pool:
     vmImage: 'macOS-10.13'
