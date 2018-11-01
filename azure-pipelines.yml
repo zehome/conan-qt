@@ -60,43 +60,43 @@ jobs:
         CONAN_DOCKER_IMAGE: conanio/gcc8
         CONAN_ARCHS: "x86_64"
       Clang 3.9 x86:
-        CONAN_Clang _VERSIONS: 3.9
+        CONAN_CLANG_VERSIONS: 3.9
         CONAN_DOCKER_IMAGE: conanio/clang39
         CONAN_ARCHS: "x86"
       Clang 3.9 x86_64:
-        CONAN_Clang _VERSIONS: 3.9
+        CONAN_CLANG_VERSIONS: 3.9
         CONAN_DOCKER_IMAGE: conanio/clang39
         CONAN_ARCHS: "x86_64"
       Clang 4.0 x86:
-        CONAN_Clang _VERSIONS: 4.0
+        CONAN_CLANG_VERSIONS: 4.0
         CONAN_DOCKER_IMAGE: conanio/clang40
         CONAN_ARCHS: "x86"
       Clang 4.0 x86_64:
-        CONAN_Clang _VERSIONS: 4.0
+        CONAN_CLANG_VERSIONS: 4.0
         CONAN_DOCKER_IMAGE: conanio/clang40
         CONAN_ARCHS: "x86_64"
       Clang 5.0 x86:
-        CONAN_Clang _VERSIONS: 5.0
+        CONAN_CLANG_VERSIONS: 5.0
         CONAN_DOCKER_IMAGE: conanio/clang50
         CONAN_ARCHS: "x86"
       Clang 5.0 x86_64:
-        CONAN_Clang _VERSIONS: 5.0
+        CONAN_CLANG_VERSIONS: 5.0
         CONAN_DOCKER_IMAGE: conanio/clang50
         CONAN_ARCHS: "x86_64"
       Clang 6.0 x86:
-        CONAN_Clang _VERSIONS: 6.0
+        CONAN_CLANG_VERSIONS: 6.0
         CONAN_DOCKER_IMAGE: conanio/clang60
         CONAN_ARCHS: "x86"
       Clang 6.0 x86_64:
-        CONAN_Clang _VERSIONS: 6.0
+        CONAN_CLANG_VERSIONS: 6.0
         CONAN_DOCKER_IMAGE: conanio/clang60
         CONAN_ARCHS: "x86_64"
       Clang 7.0 x86:
-        CONAN_Clang _VERSIONS: 7.0
+        CONAN_CLANG_VERSIONS: 7.0
         CONAN_DOCKER_IMAGE: conanio/clang7
         CONAN_ARCHS: "x86"
       Clang 7.0 x86_64:
-        CONAN_Clang _VERSIONS: 7.0
+        CONAN_CLANG_VERSIONS: 7.0
         CONAN_DOCKER_IMAGE: conanio/clang7
         CONAN_ARCHS: "x86_64"
 - job: macOS
