@@ -1,5 +1,5 @@
 variables:
-- group: conan-credentials  
+- group: conan-credentials
 jobs:
 - job: Linux
   pool:
@@ -18,86 +18,87 @@ jobs:
     env:
       CONAN_LOGIN_USERNAME: $(CONAN_LOGIN_USERNAME)
       CONAN_PASSWORD: $(CONAN_PASSWORD)
+      CONAN_DOCKER_32_IMAGES: True
   strategy:
     matrix:
-      GCC4.9_X86:
+      Gcc 4.9 x86:
         CONAN_GCC_VERSIONS: 4.9
         CONAN_DOCKER_IMAGE: conanio/gcc49
         CONAN_ARCHS: "x86"
-      GCC4.9_X86_64:
+      Gcc 4.9 x86_64:
         CONAN_GCC_VERSIONS: 4.9
         CONAN_DOCKER_IMAGE: conanio/gcc49
         CONAN_ARCHS: "x86_64"
-      GCC5_X86:
+      Gcc 5 x86:
         CONAN_GCC_VERSIONS: 5
         CONAN_DOCKER_IMAGE: conanio/gcc5
         CONAN_ARCHS: "x86"
-      GCC5_X86_64:
+      Gcc 5 x86_64:
         CONAN_GCC_VERSIONS: 5
         CONAN_DOCKER_IMAGE: conanio/gcc5
         CONAN_ARCHS: "x86_64"
-      GCC6_X86:
+      Gcc 6 x86:
         CONAN_GCC_VERSIONS: 6
         CONAN_DOCKER_IMAGE: conanio/gcc6
         CONAN_ARCHS: "x86"
-      GCC6_X86_64:
+      Gcc 6 x86_64:
         CONAN_GCC_VERSIONS: 6
         CONAN_DOCKER_IMAGE: conanio/gcc6
         CONAN_ARCHS: "x86_64"
-      GCC7_X86:
+      Gcc 7 x86:
         CONAN_GCC_VERSIONS: 7
         CONAN_DOCKER_IMAGE: conanio/gcc7
         CONAN_ARCHS: "x86"
-      GCC7_X86_64:
+      Gcc 7 x86_64:
         CONAN_GCC_VERSIONS: 7
         CONAN_DOCKER_IMAGE: conanio/gcc7
         CONAN_ARCHS: "x86_64"
-      GCC8_X86:
+      Gcc 8 x86:
         CONAN_GCC_VERSIONS: 8
         CONAN_DOCKER_IMAGE: conanio/gcc8
         CONAN_ARCHS: "x86"
-      GCC8_X86_64:
+      Gcc 8 x86_64:
         CONAN_GCC_VERSIONS: 8
         CONAN_DOCKER_IMAGE: conanio/gcc8
         CONAN_ARCHS: "x86_64"
-      CLANG3.9_X86:
-        CONAN_CLANG_VERSIONS: 3.9
+      Clang 3.9 x86:
+        CONAN_Clang _VERSIONS: 3.9
         CONAN_DOCKER_IMAGE: conanio/clang39
         CONAN_ARCHS: "x86"
-      CLANG3.9_X86_64:
-        CONAN_CLANG_VERSIONS: 3.9
+      Clang 3.9 x86_64:
+        CONAN_Clang _VERSIONS: 3.9
         CONAN_DOCKER_IMAGE: conanio/clang39
         CONAN_ARCHS: "x86_64"
-      CLANG4.0_X86:
-        CONAN_CLANG_VERSIONS: 4.0
+      Clang 4.0 x86:
+        CONAN_Clang _VERSIONS: 4.0
         CONAN_DOCKER_IMAGE: conanio/clang40
         CONAN_ARCHS: "x86"
-      CLANG4.0_X86_64:
-        CONAN_CLANG_VERSIONS: 4.0
+      Clang 4.0 x86_64:
+        CONAN_Clang _VERSIONS: 4.0
         CONAN_DOCKER_IMAGE: conanio/clang40
         CONAN_ARCHS: "x86_64"
-      CLANG5.0_X86:
-        CONAN_CLANG_VERSIONS: 5.0
+      Clang 5.0 x86:
+        CONAN_Clang _VERSIONS: 5.0
         CONAN_DOCKER_IMAGE: conanio/clang50
         CONAN_ARCHS: "x86"
-      CLANG5.0_X86_64:
-        CONAN_CLANG_VERSIONS: 5.0
+      Clang 5.0 x86_64:
+        CONAN_Clang _VERSIONS: 5.0
         CONAN_DOCKER_IMAGE: conanio/clang50
         CONAN_ARCHS: "x86_64"
-      CLANG6.0_X86:
-        CONAN_CLANG_VERSIONS: 6.0
+      Clang 6.0 x86:
+        CONAN_Clang _VERSIONS: 6.0
         CONAN_DOCKER_IMAGE: conanio/clang60
         CONAN_ARCHS: "x86"
-      CLANG6.0_X86_64:
-        CONAN_CLANG_VERSIONS: 6.0
+      Clang 6.0 x86_64:
+        CONAN_Clang _VERSIONS: 6.0
         CONAN_DOCKER_IMAGE: conanio/clang60
         CONAN_ARCHS: "x86_64"
-      CLANG7.0_X86:
-        CONAN_CLANG_VERSIONS: 7.0
+      Clang 7.0 x86:
+        CONAN_Clang _VERSIONS: 7.0
         CONAN_DOCKER_IMAGE: conanio/clang7
         CONAN_ARCHS: "x86"
-      CLANG7.0_X86_64:
-        CONAN_CLANG_VERSIONS: 7.0
+      Clang 7.0 x86_64:
+        CONAN_Clang _VERSIONS: 7.0
         CONAN_DOCKER_IMAGE: conanio/clang7
         CONAN_ARCHS: "x86_64"
 - job: macOS
@@ -117,15 +118,15 @@ jobs:
       CONAN_PASSWORD: $(CONAN_PASSWORD)
   strategy:
     matrix:
-      CLANG8.1:
+      Clang 8.1:
         CONAN_APPLE_CLANG_VERSIONS: 8.1
         XCODE_VERSION: 8.3.3
-      CLANG9.0:
+      Clang 9.0:
         CONAN_APPLE_CLANG_VERSIONS: 9.0
         XCODE_VERSION: 9.2
-      CLANG9.1:
+      Clang 9.1:
         CONAN_APPLE_CLANG_VERSIONS: 9.1
         XCODE_VERSION: 9.4.1
-      CLANG10.0:
+      Clang 10.0:
         CONAN_APPLE_CLANG_VERSIONS: 10.0
         XCODE_VERSION: 10
