@@ -61,6 +61,7 @@ class QtConan(ConanFile):
         "GUI": [True, False],
         "widgets": [True, False],
         "config": "ANY",
+        "multiconfiguration": [True, False],
     }, **{module: [True, False] for module in _submodules}
     )
     no_copy_source = True
@@ -72,6 +73,7 @@ class QtConan(ConanFile):
         "GUI": True,
         "widgets": True,
         "config": None,
+        "multiconfiguration": False,
     }, **{module: False for module in _submodules}
     )
     short_paths = True
@@ -117,6 +119,9 @@ class QtConan(ConanFile):
             self.options.opengl = "no"
         if self.settings.os == "Android" and self.options.opengl == "desktop":
             raise ConanInvalidConfiguration("OpenGL desktop is not supported on Android. Consider using OpenGL es2")
+
+        if self.options.multiconfiguration:
+            del self.settings.build_type
 
         assert QtConan.version == QtConan._submodules['qtbase']['branch']
 
@@ -252,7 +257,9 @@ class QtConan(ConanFile):
                     args.append("-static-runtime")
         else:
             args.insert(0, "-shared")
-        if self.settings.build_type == "Debug":
+        if self.options.multiconfiguration:
+            args.append("-debug-and-release")
+        elif self.settings.build_type == "Debug":
             args.append("-debug")
         elif self.settings.build_type == "Release":
             args.append("-release")
