@@ -304,6 +304,9 @@ class QtConan(ConanFile):
             lib_paths = self.deps_cpp_info["OpenSSL"].lib_paths
             os.environ["OPENSSL_LIBS"] = " ".join(["-L" + i for i in lib_paths] + ["-l" + i for i in libs])
 
+        if tools.os_info.is_linux:
+            args.append("-no-feature-statx")
+
         if self.settings.os == "Linux":
             if self.options.GUI:
                 args.append("-qt-xcb")
